@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirmación de Orden</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ 
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="cart-outline" size="large" color="primary"></ion-icon>
+        <p>Carrito</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="car-outline" size="large" color="primary"></ion-icon>
+        <p>Envío</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="card-outline" size="large" color="primary"></ion-icon>
+        <p>Pago</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="receipt-outline" size="large" color="primary"></ion-icon>
+        <p>Pedido</p>
+      </ion-col>
+    </ion-row>
+    <ion-progress-bar value="1" type="determinate"></ion-progress-bar>
+  </ion-grid>
+
+  
+  <ion-card *ngIf="cart.length > 0">
+    <ion-card-header>
+      <ion-card-title>Boleta</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <h2>Productos:</h2>
+      <ion-list>
+        <ion-item *ngFor="let product of cart">
+          <ion-label>
+            <h3>{{ product.name }}</h3>
+            <p>{{ product.quantity }} x {{ product.price | currency }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+
+      <h2>Total: {{ total | currency }}</h2>
+
+      <h3>Datos de Envío:</h3>
+      <p>Nombre: {{ shippingDetails.name }}</p>
+      <p>Dirección: {{ shippingDetails.address }}</p>
+    </ion-card-content>
+  </ion-card>
+
+ 
+  <ion-card>
+    <ion-card-content>
+      <h2>¡Gracias por su compra!</h2>
+      <p>Su pedido ha sido confirmado y pronto recibirá una actualización sobre su envío.</p>
+    </ion-card-content>
+  </ion-card>
+
+  
+  <ion-button expand="full" color="primary" routerLink="/home">Volver al Inicio</ion-button>
+</ion-content>

@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <div class="fullscreen-container">
+    
+    <img src="assets/grafica/logo3.png" alt="Logo" class="top-logo">
+
+    <div class="ion-page" id="main-content">
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button> 
+          </ion-buttons>
+          <ion-title>Registrate</ion-title>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <form (ngSubmit)="register()">
+          
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input 
+              [(ngModel)]="email" 
+              name="email" 
+              type="email" 
+              placeholder="Ingresa tu email" 
+              required
+            ></ion-input>
+          </ion-item>
+
+         
+          <ion-item>
+            <ion-label position="floating">Contraseña</ion-label>
+            <ion-input 
+              [(ngModel)]="password" 
+              name="password" 
+              type="password" 
+              placeholder="Ingresa tu contraseña" 
+              required
+            ></ion-input>
+          </ion-item>
+
+          
+          <ion-item>
+            <ion-label position="floating">Nombre</ion-label>
+            <ion-input 
+              [(ngModel)]="firstName" 
+              name="firstName" 
+              placeholder="Ingresa tu nombre"
+              required
+            ></ion-input>
+          </ion-item>
+
+          
+          <ion-item>
+            <ion-label position="floating">Apellido</ion-label>
+            <ion-input 
+              [(ngModel)]="lastName" 
+              name="lastName" 
+              placeholder="Ingresa tu apellido"
+              required
+            ></ion-input>
+          </ion-item>
+
+          
+          <ion-item>
+            <ion-label position="floating">Teléfono</ion-label>
+            <ion-input 
+              [(ngModel)]="phone" 
+              name="phone" 
+              type="tel"
+              placeholder="Ingresa tu número de teléfono"
+            ></ion-input>
+          </ion-item>
+
+          
+          <ion-item>
+            <ion-label position="floating">Dirección</ion-label>
+            <ion-input 
+              [(ngModel)]="address" 
+              name="address"
+              placeholder="Ingresa tu dirección"
+            ></ion-input>
+          </ion-item>
+
+          
+          <ion-item>
+            <ion-label position="floating">Código Postal</ion-label>
+            <ion-input 
+              [(ngModel)]="postalCode" 
+              name="postalCode"
+              placeholder="Ingresa tu código postal"
+            ></ion-input>
+          </ion-item>
+
+          
+          <ion-button expand="full" type="submit">Registrarse</ion-button>
+          <ion-button expand="full" color="light" routerLink="/login">iniciar sesion</ion-button>
+        </form>
+      </ion-content>
+    </div>
+  </div>
+</ion-content>

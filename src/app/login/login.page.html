@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button> 
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-fullscreen">
+    <img src="assets/grafica/logo3.png" alt="Logo" class="login-logo">
+
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input [(ngModel)]="email" type="email" placeholder="Ingresa tu email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="password" type="password" placeholder="Ingresa tu contraseña"></ion-input>
+    </ion-item>
+
+
+    <ion-button expand="full" color="light" routerLink="/forgot-password">Olvidé mi Contraseña</ion-button>
+
+    <ion-button expand="full" (click)="login()">Iniciar Sesión</ion-button>
+
+    <ion-button expand="full" color="light" routerLink="/register">Registrarse</ion-button>
+  </div>
+</ion-content>

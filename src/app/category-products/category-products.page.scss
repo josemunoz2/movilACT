@@ -1,0 +1,32 @@
+ion-content {
+    ion-grid {
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 350px; 
+        width: 100%;
+        margin: 10px auto;
+      }
+  
+      .product-image {
+        max-height: 150px;
+        object-fit: contain;
+        width: auto;
+        height: auto;
+      }
+  
+      ion-item {
+        margin-top: 10px;
+        max-width: 80%; 
+      }
+  
+      ion-button {
+        margin-top: 10px;
+        max-width: 80%; 
+      }
+    }
+  }
+  

@@ -1,0 +1,58 @@
+
+<div class="fullscreen-container">
+  <img src="assets/grafica/logo3.png" alt="Logo" class="top-logo">
+
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button> 
+        </ion-buttons>
+        <ion-title>Perfil de Usuario</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+
+      <form (ngSubmit)="saveProfile()">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input [(ngModel)]="user.firstName" name="firstName" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input [(ngModel)]="user.lastName" name="lastName" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Teléfono</ion-label>
+          <ion-input [(ngModel)]="user.phone" name="phone" type="tel"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Dirección</ion-label>
+          <ion-input [(ngModel)]="user.address" name="address"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Código Postal</ion-label>
+          <ion-input [(ngModel)]="user.postalCode" name="postalCode" type="text"></ion-input>
+        </ion-item>
+
+
+        <ion-item>
+          <ion-label>Foto de Perfil</ion-label>
+          <input type="file" (change)="onFileSelected($event)">
+        </ion-item>
+
+        <div class="profile-pic">
+          <img [src]="profileImage" *ngIf="profileImage" alt="Foto de Perfil">
+        </div>
+
+
+        <ion-button expand="full" type="submit">Guardar Perfil</ion-button>
+      </form>
+    </ion-content>
+  </div>
+</div>

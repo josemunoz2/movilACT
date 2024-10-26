@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/cart"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Datos de Envío</ion-title>
+  </ion-toolbar>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="cart-outline" size="large" color="primary"></ion-icon>
+        <p>Carrito</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="car-outline" size="large" color="primary"></ion-icon>
+        <p>Envío</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="card-outline" size="large" color="medium"></ion-icon>
+        <p>Pago</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="receipt-outline" size="large" color="medium"></ion-icon>
+        <p>Pedido</p>
+      </ion-col>
+    </ion-row>
+    <ion-progress-bar value="0.50" type="determinate"></ion-progress-bar>
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="submitShippingDetails()">
+    <ion-item>
+      <ion-label position="floating">Nombre Completo</ion-label>
+      <ion-input [(ngModel)]="shippingDetails.name" name="name" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Dirección</ion-label>
+      <ion-input [(ngModel)]="shippingDetails.address" name="address" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Código Postal</ion-label>
+      <ion-input [(ngModel)]="shippingDetails.postalCode" name="postalCode" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input [(ngModel)]="shippingDetails.phone" name="phone" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit" color="primary">Confirmar Pedido</ion-button>
+  </form>
+</ion-content>

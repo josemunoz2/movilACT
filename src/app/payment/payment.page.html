@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Método de Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="cart-outline" size="large" color="primary"></ion-icon>
+        <p>Carrito</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="car-outline" size="large" color="primary"></ion-icon>
+        <p>Envío</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="card-outline" size="large" color="primary"></ion-icon>
+        <p>Pago</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="receipt-outline" size="large" color="medium"></ion-icon>
+        <p>Pedido</p>
+      </ion-col>
+    </ion-row>
+    <ion-progress-bar value="0.75" type="determinate"></ion-progress-bar>
+
+  </ion-grid>
+  
+
+  <ion-item>
+    <ion-label position="floating">Número de Tarjeta</ion-label>
+    <ion-input type="text" maxlength="16"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Fecha de Expiración</ion-label>
+    <ion-input type="month" min="2027-01"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">CVC</ion-label>
+    <ion-input type="text" maxlength="3"></ion-input>
+  </ion-item>
+
+  
+  <ion-button expand="full" (click)="confirmPayment()">Confirmar Pago</ion-button>
+</ion-content>

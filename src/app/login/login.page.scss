@@ -1,0 +1,36 @@
+ion-content {
+  --background: transparent !important;
+}
+
+.login-fullscreen {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #ba42e9, #1f1c2c); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-logo {
+  width: 120px;
+  margin-bottom: 30px;
+}
+
+form {
+  width: 100%;
+  max-width: 400px; 
+}
+
+ion-item {
+  --background: rgba(58, 58, 58, 0.8);
+  --border-color: #8e2de2;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+ion-button {
+  margin-top: 20px;
+  --background: linear-gradient(45deg, #8e2de2, #4a00e0); 
+}

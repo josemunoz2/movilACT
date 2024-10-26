@@ -1,0 +1,71 @@
+/* Fondo degradado del contenedor principal */
+.fullscreen-container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #ba42e9, #1f1c2c); /* Degradado morado a azul oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5); /* Sombra interna */
+  padding: 20px;
+}
+
+/* Logo superior */
+.top-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+/* Fondo transparente para ion-content */
+ion-content {
+  --background: transparent !important;
+}
+
+/* Estilos del formulario */
+ion-item {
+  --background: rgba(58, 58, 58, 0.8); /* Fondo semitransparente oscuro */
+  --border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+}
+
+/* Centrar la imagen de perfil */
+.profile-pic {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+ion-button {
+  --background: linear-gradient(45deg, #00eaff, #a806e7); 
+  --border-radius: 25px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 1.2rem;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+ion-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+ion-item input[type="file"] {
+  color: #ffffff;
+  margin-top: 10px;
+  font-size: 1rem;
+}

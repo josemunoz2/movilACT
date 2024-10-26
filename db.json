@@ -1,0 +1,54 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "usuario@ejemplo.com",
+      "password": "123456",
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "phone": "123456789",
+      "address": "Calle 123",
+      "postalCode": "12345"
+    },
+    {
+      "id": "b491",
+      "email": "joseroberto@gmail.com",
+      "password": "lijiko45",
+      "firstName": "jose",
+      "lastName": "muñoz",
+      "phone": "+56974751810",
+      "address": "parque 2427",
+      "postalCode": "808000"
+    },
+    {
+      "id": "9c62",
+      "email": "arielmontero@gmail.com",
+      "password": "weko",
+      "firstName": "ariel",
+      "lastName": "montero",
+      "phone": "+56984736282",
+      "address": "parque 2",
+      "postalCode": "8908332"
+    },
+    {
+      "id": "fec0",
+      "email": "ariel@gmail.com",
+      "password": "weko",
+      "firstName": "ariel",
+      "lastName": "perez",
+      "phone": "+58858585",
+      "address": "5 pinoddd",
+      "postalCode": "808000"
+    },
+    {
+      "id": "6367",
+      "email": "dd",
+      "password": "dd",
+      "firstName": "dd",
+      "lastName": "dd",
+      "phone": "d",
+      "address": "dd",
+      "postalCode": "dd"
+    }
+  ]
+}

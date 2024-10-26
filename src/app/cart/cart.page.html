@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Carrito de Compras</ion-title>
+  </ion-toolbar>
+
+  <!-- Barra  -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="cart-outline" size="large" color="primary"></ion-icon>
+        <p>Carrito</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="car-outline" size="large" color="medium"></ion-icon>
+        <p>Envío</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="card-outline" size="large" color="medium"></ion-icon>
+        <p>Pago</p>
+      </ion-col>
+      <ion-col size="3" class="ion-text-center">
+        <ion-icon name="receipt-outline" size="large" color="medium"></ion-icon>
+        <p>Pedido</p>
+      </ion-col>
+    </ion-row>
+    <ion-progress-bar value="0.25" type="determinate"></ion-progress-bar>
+
+  </ion-grid>
+</ion-header>
+
+<ion-content>
+  <!-- MMotrar produ carrito -->
+  <ion-list *ngIf="cart.length > 0; else emptyCart">
+    <ion-item *ngFor="let product of cart">
+      <ion-thumbnail slot="start">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ product.name }}</h2>
+        <p>Precio: ${{ product.price }}</p>
+      </ion-label>
+      <ion-button slot="end" color="danger" (click)="removeFromCart(product)">Eliminar</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Carrito vacio -->
+  <ng-template #emptyCart>
+    <ion-item>
+      <ion-label>El carrito está vacío</ion-label>
+    </ion-item>
+  </ng-template>
+
+  <!-- MMOtrar total carrito -->
+  <ion-item *ngIf="cart.length > 0">
+    <ion-label><strong>Total: ${{ total }}</strong></ion-label>
+  </ion-item>
+
+  <ion-button expand="full" *ngIf="cart.length > 0" (click)="goToShippingDetails()">Comprar</ion-button>
+</ion-content>
